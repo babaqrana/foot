@@ -1,3 +1,7 @@
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
 .ms-offscreen {
 	clip: rect(0 0 0 0) !important;
 	width: 1px !important;
@@ -238,7 +242,7 @@
 body {
     font-family: Mulish;
     margin: 0;
-    padding: 5px;
+    padding: 45px 5px 5px 5px;
 }
 
 .row {
@@ -339,17 +343,25 @@ table.sticky {
 tr {
 	background-color: white;
 }
+.row:nth-child(2n),
 tr:nth-child(2n) {
     background-color: #f8f8f8;
 }
 
-
-
-.row:nth-child(2n) {
-    background-color: #f8f8f8;
+img {
+	max-width: 100%;
+	user-select: none;
 }
 
-img {
+.logo {
+	text-align: center;
+	margin-bottom: 50px;
+}
+.logo img {
+    max-width: 250px;
+}
+
+.team img {
     margin: 0;
     width: 40px;
     display: block;
