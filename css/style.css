@@ -280,6 +280,12 @@ table tr td {
     overflow-x: scroll;
     width: 240px;
 }
+.values-wrapper.noBorder {
+    border-right: 1px solid #cfcfcf;
+}
+.noBorder table:last-child {
+    border-right: 0;
+}
 
 .select-wrapper {
 	margin-bottom : 20px;
@@ -337,6 +343,7 @@ table {
     position: relative;
 	vertical-align: top;
 }
+
 table.sticky {
     z-index: 9;
 }
