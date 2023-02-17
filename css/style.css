@@ -310,7 +310,7 @@ table th {
     cursor: pointer;
     height: 28px;
     padding-right: 2px;
-    background-color: transparent;
+    background-color: transparent !important;
 }
 .remove_table:after {
     content: "";
