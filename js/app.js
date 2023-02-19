@@ -267,7 +267,7 @@ function getStatistics() {
 			if( countingAjax == leagusIds.length ) last = true;
 
 			var leagueName = leagusName[events.parameters.league],
-				text = '<table id="league-'+leagueName.replace(' ', '_')+'">';
+				text = '<table id="league-'+leagueName.replace(/ /g, "_")+'">';
 
 			statistics[events.parameters.league] = events.response;
 			
@@ -560,7 +560,7 @@ function getStatistics() {
 									Min1PrvoMin1Drugo = 0,
 									end;
 
-								if( $('#tim-'+teamName.replace(' ', '_')).length ) return false;
+								if( $('#tim-'+teamName.replace(/ /g, "_")).length ) return false;
 
 								for (let l = 0; l < allGames.length; l++) {
 									var fixture = allGames[l],
@@ -678,7 +678,7 @@ function getStatistics() {
 										if( ukupnoGolovaPrvo >= 1 && ukupnoGolovaDrugo >= 1 ) Min1PrvoMin1Drugo++;
 								}
 
-								var text = '<table data-id="'+teamID+'" data-teamName="'+teamName+'" id="tim-'+teamName.replace(' ', '_')+'">';
+								var text = '<table data-id="'+teamID+'" data-teamName="'+teamName+'" id="tim-'+teamName.replace(/ /g, "_")+'">';
 								text += '<tr><th>' + teamName + '</th></tr>';
 								text += '<tr><th>' + BrojUtakmica + '</th></tr>';
 								text += '<tr><th>' + UkupanBrojGolova + ' ( '+(UkupanBrojGolova/BrojUtakmica).toFixed(1)+' )</th></tr>';
@@ -740,8 +740,8 @@ function getStatistics() {
 
 							} else {
 								
-								if( $('#tim-' + values.text.replace(' ', '_') ).length ) {
-									$('#tim-' + values.text.replace(' ', '_') ).remove();
+								if( $('#tim-' + values.text.replace(/ /g, "_") ).length ) {
+									$('#tim-' + values.text.replace(/ /g, "_") ).remove();
 								}
 
 							}
