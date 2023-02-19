@@ -644,13 +644,13 @@ function getStatistics() {
 										// Domacin pobednik ili X
 										if ( timeJeDomacin ) {
 
-											if ( ( fulltimeHome > fulltimeAway ) || ( fulltimeHome === fulltimeAway ) ) JedanX++;
+											if ( ( fulltimeHome > fulltimeAway ) || ( fulltimeHome == fulltimeAway ) ) JedanX++;
 
 
 										} else {
 
 											// Gost pobednik ili X
-											if ( ( fulltimeAway > fulltimeHome ) || ( fulltimeHome === fulltimeAway ) ) XDva++;
+											if ( ( fulltimeAway > fulltimeHome ) || ( fulltimeHome == fulltimeAway ) ) XDva++;
 										}
 
 										// Domacin ili Gost pobednik
@@ -722,9 +722,9 @@ function getStatistics() {
 								text += '<tr><th>' + DrugoDvaPlus + ' <span>(' + ((DrugoDvaPlus/BrojUtakmica)*100).toFixed(2) + '%)</span>' + '</th></tr>';
 
 
-								text += '<tr><th>' + JedanX + ' <span>(' + ((JedanX/BrojUtakmica)*100).toFixed(2) + '%)</span>' + '</th></tr>';
+								text += '<tr><th>' + JedanX + ' <span>(' + ((JedanX/TimBioDomacin)*100).toFixed(2) + '%)</span>' + '</th></tr>';
 								text += '<tr><th>' + JedanDva + ' <span>(' + ((JedanDva/BrojUtakmica)*100).toFixed(2) + '%)</span>' + '</th></tr>';
-								text += '<tr><th>' + XDva + ' <span>(' + ((XDva/BrojUtakmica)*100).toFixed(2) + '%)</span>' + '</th></tr>';
+								text += '<tr><th>' + XDva + ' <span>(' + ((XDva/TimBioGost)*100).toFixed(2) + '%)</span>' + '</th></tr>';
 								text += '<tr><th>' + Max1PrvoMax1Drugo + ' <span>(' + ((Max1PrvoMax1Drugo/BrojUtakmica)*100).toFixed(2) + '%)</span>' + '</th></tr>';
 								text += '<tr><th>' + Max1PrvoMax2Drugo + ' <span>(' + ((Max1PrvoMax2Drugo/BrojUtakmica)*100).toFixed(2) + '%)</span>' + '</th></tr>';
 								text += '<tr><th>' + Max1PrvoMax3Drugo + ' <span>(' + ((Max1PrvoMax3Drugo/BrojUtakmica)*100).toFixed(2) + '%)</span>' + '</th></tr>';
