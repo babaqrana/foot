@@ -31,7 +31,7 @@ var next = 10,
 if( location.hostname === "localhost" || location.hostname === "192.168.0.30"  ) {
 	$('button').show();
 }
-GetPantryJson();
+//GetPantryJson();
 getStatistics();
 
 var stats = '<table class="sticky">';
