@@ -3,6 +3,7 @@
 var API = 'c4672ea6b91af024edb4419cd157396a'; // My API
 
 API = '9a7e1254b9aa6badfe70164e6cfe815d'; // https://jogosdehoje.com.br/ API
+API = 'fe5c0471c53ab77ba0de5712e7094cb9';
 
 var next = 10,
 	leagusName = {
@@ -32,7 +33,28 @@ if( location.hostname === "localhost" || location.hostname === "192.168.0.30"  )
 	$('button').show();
 }
 //GetPantryJson();
-getStatistics();
+//getStatistics();
+var settings = {
+  "url": "https://v3.football.api-sports.io/status",
+  "method": "GET",
+  "timeout": 0,
+  "headers": {
+	"x-rapidapi-key": API,
+	"x-rapidapi-host": "v3.football.api-sports.io"
+  },
+};
+
+$.ajax(settings).done(function (events) {
+	var requests = events.response.requests;
+	if( (requests.limit_day - requests.current) >= 50 ) {
+		getStatistics();
+	} else {
+		$('#statistics h3').css('textAlign', 'center').html("Potrosili ste dnevni limit!");
+		$('#statisticsTeam').remove();
+		$('#preload').fadeOut();
+	}
+	
+});
 
 var stats = '<table class="sticky">';
 	stats += '<tr><th>Tim</th></tr>';
