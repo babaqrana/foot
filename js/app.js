@@ -273,7 +273,7 @@ function getStatistics() {
 		var leagusId = leagusIds[l];
 
 		var settings = {
-		  "url": "https://v3.football.api-sports.io/fixtures?league="+leagusId+"&season=2022&status=FT",
+		  "url": "https://v3.football.api-sports.io/fixtures?league="+leagusId+"&season=2023&status=FT",
 		  "method": "GET",
 		  "timeout": 0,
 		  "headers": {
